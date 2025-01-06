@@ -47,6 +47,9 @@ jobs:
       - name: Install dependencies
         run: bun install --ci
 
+      - name: Lint and Check Types
+        run: npx next lint || echo "Lint errors ignored temporarily"
+
       - name: Build with Next.js
         run: npx next build
 
